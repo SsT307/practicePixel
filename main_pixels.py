@@ -12,6 +12,7 @@ def get_color(num):
 def draw_colored_pixel():
     pixel_num = int(input("Can you enter a number: "))
     color = get_color(pixel_num)
+    draw_grid()
     t.fillcolor(color)
     t.begin_fill()
     for i in range(5):
@@ -24,16 +25,19 @@ rows = int(input("How many rows would you like to have: "))
 columns = int(input("How many columns would you like to have: "))
 
 def draw_grid():
-    t.goto(-columns/2, -rows/2)
+    t.goto(-rows/2,columns/2)
     count = 0
     while True:
         count += 1
-        draw_colored_pixel()
+        for i in range(5):
+            t.forward(35)
+            t.left(90)
         if count > rows:
             break
             
         
         
-draw_grid()
+draw_colored_pixel()
     
 t.Screen().exitonclick()
+
