@@ -3,6 +3,8 @@ import turtle
 sc = turtle.Screen()
 turtle = turtle.Turtle()
 size = 30
+
+
 def draw_square(color):
     turtle.fillcolor(color)
     turtle.begin_fill()
@@ -15,7 +17,7 @@ def draw_grid():
     start_y = 300  
     for row in range(20):
         for col in range(20):
-            x = col * size - 300  
+            x = col * size - start_y  
             y = start_y - row * size  
             color = 'black' if (row + col) % 2 == 0 else 'red'
             turtle.penup()
