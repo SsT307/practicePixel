@@ -1,1 +1,0 @@
-black, white, red, yellow, orange, green, yellowgreen, sienna, tan, gray, darkgray
